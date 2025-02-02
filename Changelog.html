@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog Component</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .changelog-container {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .changelog-container h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .changelog-container p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 0;
+            list-style: none;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            background: #d3d3d3;
+            height: 100%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            text-align: left;
+            padding-left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            text-align: right;
+            padding-right: 0;
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .timeline-content {
+            display: inline-block;
+            background: #f4f4f4;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 10px 15px;
+            max-width: 300px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 8px;
+            left: calc(50% - 6px);
+            width: 12px;
+            height: 12px;
+            background: #555;
+            border-radius: 50%;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="changelog-container">
+        <h1>Changelog</h1>
+        <p>Here's everything we have shipped in the past few days</p>
+        <ul class="timeline">
+            <li class="timeline-item">
+                <div class="timeline-dot"></div>
+                <p class="timeline-date">September 3, 2024</p>
+                <div class="timeline-content">Announcing Projects on Frontend Roadmap</div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-dot"></div>
+                <p class="timeline-date">August 28, 2024</p>
+                <div class="timeline-content">Build your learning habits with learning streaks</div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-dot"></div>
+                <p class="timeline-date">August 25, 2024</p>
+                <div class="timeline-content">Git and GitHub Roadmap</div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-dot"></div>
+                <p class="timeline-date">August 22, 2024</p>
+                <div class="timeline-content">Submit your project solution and get feedback</div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-dot"></div>
+                <p class="timeline-date">August 15, 2024</p>
+                <div class="timeline-content">Backend Project Ideas</div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-dot"></div>
+                <p class="timeline-date">August 10, 2024</p>
+                <div class="timeline-content">Redis Roadmap</div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-dot"></div>
+                <p class="timeline-date">August 1, 2024</p>
+                <div class="timeline-content">Changelog page to help you stay in the loop</div>
+            </li>
+        </ul>
+        <a href="#" class="btn">Visit Complete Changelog</a>
+    </div>
+</body>
+</html>
